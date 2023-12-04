@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>French Tacos 🌯</title>
+    <style>
+      body {
+        background: linear-gradient(
+          64.8deg,
+          rgba(255, 135, 102, 0.735) 10.1%,
+          rgba(239, 191, 174, 0.806) 49%
+        );
+      }
+      h1,
+      h2 {
+        margin: 10px;
+        text-align: center;
+      }
+      h1 {
+        border-radius: 10px;
+        color: #815983;
+        font-family: segoe script;
+        line-height: 50px;
+        opacity: 0.8;
+      }
+
+      h2 {
+        color: #008d80;
+        font-family: Arial, Helvetica, sans-serif;
+        opacity: 0.6;
+      }
+
+      hr {
+        background-color: #815983;
+        border: none;
+        height: 1px;
+        margin: 25px;
+        opacity: 0.3;
+      }
+      img {
+        border-radius: 10px;
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+      }
+      p {
+        color: #815983;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        line-height: 1.3;
+        margin: 15px;
+        padding: 15px;
+        opacity: 0.8;
+      }
+      button {
+        border: #fab254;
+        border-radius: 20px;
+        background-color: #fab254;
+        box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+        display: block;
+        font-size: 16px;
+        margin: 0 auto;
+        color: #f2f0ea;
+        opacity: 0.7;
+        padding: 12px 18px;
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        cursor: pointer;
+        opacity: 0.4;
+      }
+
+      .container {
+        background-color: #f8f7bc37;
+        border-radius: 8px;
+        margin: 0 auto;
+        max-width: 500px;
+        padding: 30px;
+      }
+
+      .not-tacos {
+        font-weight: 800;
+      }
+
+      .learn-more {
+        color: #008d80;
+        opacity: 0.8;
+        text-decoration: none;
+      }
+
+      .learn-more:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      .quiz-button {
+        background-color: #008d80;
+      }
+
+      .footer {
+        color: grey;
+        font-family: monospace;
+        margin-top: 30px;
+        opacity: 0.7;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>I 💛 FRENCH TACOS</h1>
+      <h2>...which are <span class="not-tacos">not</span> tacos</h2>
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/766/original/french_taco.jpg?1698135294"
+        alt="French taco"
+        width="300"
+      />
+      <p>
+        <b>French tacos</b> are the ultimate fast food: a cheap, delicious, and
+        fully customizable meal-on-the-go. Not to be confused with Mexican tacos
+        (a.k.a. “actual tacos”), <b>French tacos</b> originated in the
+        <em>Rhône-Alpes</em> region of France and bear a close resemblance to
+        döner kebabs. Patrons of any French taco establishment have a choice of
+        meat (including ground beef, chicken nuggets, and merguez sausage),
+        French fries, sauces, and other toppings, all wrapped in a flour
+        tortilla and grilled to perfection.
+        <br />
+        <br />
+        Popular among teenagers, the currently or recently drunk, and other
+        gastrointestinally fearless locals, <b>French tacos</b> have spread
+        worldwide since the early 2000s, satisfying everyone except those
+        expecting a taco.
+      </p>
+      <p>
+        👉 Learn more on
+        <a
+          href="https://en.wikipedia.org/wiki/French_tacos"
+          target="_blank"
+          class="learn-more"
+        >
+          Wikipedia
+        </a>
+      </p>
+      <button
+        type="button"
+        onclick="make()"
+      >
+        MAKE YOUR OWN
+      </button>
+      <br />
+      <button class="quiz-button">QUIZ YOURSELF</button>
+
+      <p class="footer">Written ✍️ and coded 👩‍💻 by Jamie Leigh</p>
+    </div>
+    <script>
+      function make() {
+        window.location.href = "https://www.youtube.com/watch?v=vz7gGD0ws4c";
+      }
+
+      function quiz() {
+        let response = prompt("Are French tacos tacos?");
+
+        if (response === "no" || response === "No" || response === "n") {
+          alert("That is correct! Reward yourself with a French taco 🌯");
+        } else {
+          alert("That is incorrect. Punish yourself with a French taco 🌯");
+        }
+      }
+
+      let quizYourself = document.querySelector(".quiz-button");
+      quizYourself.addEventListener("click", quiz);
+    </script>
+  </body>
+</html>
